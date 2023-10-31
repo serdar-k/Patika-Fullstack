@@ -48,4 +48,4 @@ Kullanıcının belirli bir süre sonunda, backend'e istek yapabilmesi için otu
 
 ## Uygulamada Çözülmesi Gereken Problemler
 * Kullanıcının access token yapısının süresi dolduğunda kullanıcı "expire" sayfasına yönlendirilmektedir. Ancak ilgili sayfaya gidildiğinde App.jsx dosyasında aşağıdaki görülen hata meydana gelmektedir ve kısa bir süre için kullanıcı "Logout" butonuna basamamaktadır.
-[UygulamaHata](/UygulamaHata.png)
+![UygulamaHata](https://github.com/serdar-k/Patika-Fullstack/blob/main/UygulamaHata.png)
