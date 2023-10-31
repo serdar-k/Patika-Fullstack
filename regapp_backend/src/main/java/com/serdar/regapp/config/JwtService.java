@@ -27,7 +27,7 @@ public class JwtService {
     }
 
     public String generateToken(UserDetails userDetails) {
-        long expiration = 1000 * 60 * 3;
+        long expiration = 1000 * 60 * 30;
         return generateToken(new HashMap<>(), userDetails, expiration);
     }
 
@@ -46,7 +46,7 @@ public class JwtService {
     }
 
     public String generateRefreshToken(UserDetails userDetails) {
-        long refExpiration = 1000 * 60 * 20;
+        long refExpiration = 1000 * 60 * 60;
         return buildToken(new HashMap<>(), userDetails, refExpiration);
     }
 
