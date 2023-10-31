@@ -3,7 +3,7 @@ package com.serdar.regapp.user;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.serdar.regapp.auth.token.TokenDto;
-import com.serdar.regapp.image.FileDetails;
+// import com.serdar.regapp.image.FileDetails;
 import com.serdar.regapp.user.validation.UniqueEmail;
 
 import com.serdar.regapp.vehicle.Vehicle;
@@ -39,9 +39,9 @@ public class User {
 	@JsonBackReference(value = "user-vehicle")
 	private List<Vehicle> vehicles;
 
-	@JsonIgnore
-	@OneToMany(mappedBy = "user")
-	@JsonBackReference(value = "user-image")
-	private List<FileDetails> userImages;
+	// @JsonIgnore
+	// @OneToMany(mappedBy = "user")
+	// @JsonBackReference(value = "user-image")
+	// private List<FileDetails> userImages;
 		
 }
