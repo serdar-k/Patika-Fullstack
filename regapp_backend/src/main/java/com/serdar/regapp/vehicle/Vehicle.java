@@ -3,7 +3,7 @@ package com.serdar.regapp.vehicle;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-import com.serdar.regapp.image.FileDetails;
+// import com.serdar.regapp.image.FileDetails;
 import com.serdar.regapp.user.User;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -43,7 +43,7 @@ public class Vehicle {
     @OnDelete(action = OnDeleteAction.CASCADE)
     User user;
 
-    @OneToMany(mappedBy = "vehicle")
-    @JsonBackReference(value = "vehicle-image")
-    private List<FileDetails> vehicleImage;
+    // @OneToMany(mappedBy = "vehicle")
+    // @JsonBackReference(value = "vehicle-image")
+    // private List<FileDetails> vehicleImage;
 }
