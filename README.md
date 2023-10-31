@@ -7,9 +7,12 @@
 * Spring Boot 3
 * Spring Security 6
 * JWT
+* MySQL Database
 
 ## Frontend
 * ### React
+
+* ### Axios
 
 * ### Styled Components
   Javascript (.js ya da .jsx) dosyası içerisinde, komponent bazlı CSS kodları yazmaya imkan sağlayan bir araç. Ayrıntılı bilgi -> [Styled Components](https://styled-components.com/)
@@ -32,6 +35,16 @@
 * ### React Context API
   React uygulaması içerisinde state yönetimi araçlarından biridir. Global olarak tanımlanan state yapılarının uygulama genelinde kullanılabilmesini sağlar ve "prop drilling" denen uygulamanın önüne geçer. Ayrıntılı bilgi -> [React Context API](https://react.dev/reference/react/useContext)
 
-## Uygulamada bulunan eksiklikler
-### Refresh Token
+## Uygulamada Bulunan Eksiklikler
+* Refresh Token
 Kullanıcının belirli bir süre sonunda, backend'e istek yapabilmesi için oturum açtığında kullandığı "access token" yapısının "refresh token" yardımı ile yenilenmesi gerekir.
+* Dil ve "localization" verilerinin tamamlanması gerekmektedir. Kullanıcı seçtiği dil ile işlemler yaptığında o dile göre uygulama dili değişmeli ve gösterilen mesajlar da yine seçilen dile uygun şekilde ekrana gelmelidir.
+
+## Uygulamaya Eklenebilecek Özellikler
+* Admin olarak giriş yapan kullanıcı, uygulama geneli ile ilgili bilgileri bir "dashboard" sayfası aracılığı ile görebilir. Uygulamaya kayıtlı kişi sayısı, toplam araç sayısı, bu bilgilerin grafikler yardımıyla gösterilmesi gibi özellikler eklenebilir.
+* Dinamik arama yapısı eklenebilir, kullanıcı arama kısmına birkaç harf girdikten sonra ilgili sonuçlar listelenebilir, şu anki haliyle uygulama arama işlemini gerçekleştirebilmekte fakat bu işlemi dinamik olarak yapmamaktadır.
+* Kullanıcı aracının fotoğraflarını sisteme yükleyebilmelidir.
+* Kullanıcı deneyimi için gece modu eklenebilir.
+
+## Uygulamada Çözülmesi Gereken Problemler
+* Kullanıcının access token yapısının süresi dolduğunda kullanıcı "expire" sayfasına yönlendirilmektedir. Ancak ilgili sayfaya gidildiğinde App.jsx dosyasında aşağıdaki görülen hata meydana gelmektedir ve kısa bir süre için kullanıcı "Logout" butonuna basamamaktadır.
